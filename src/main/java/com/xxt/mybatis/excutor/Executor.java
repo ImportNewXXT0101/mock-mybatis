@@ -21,8 +21,7 @@ import java.util.List;
 import com.xxt.mybatis.config.MappedStatement;
 
 /**
- * @author Clinton Begin
- * 
+ *
  * MyBaits核心接口之一，定义了数据库操作最基本的方法，SqlSession的功能都是基于它来实现的
  * 
  */

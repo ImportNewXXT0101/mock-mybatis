@@ -19,9 +19,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-/**
- * @author Clinton Begin
- */
 public interface ResultSetHandler {
 
   <E> List<E> handleResultSets(ResultSet resultSet) throws SQLException;

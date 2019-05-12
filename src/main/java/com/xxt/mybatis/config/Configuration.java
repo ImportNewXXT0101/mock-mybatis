@@ -21,9 +21,6 @@ import java.util.Map;
 import com.xxt.mybatis.binding.MapperProxyFactory;
 import com.xxt.mybatis.session.SqlSession;
 
-/**
- * @author Clinton Begin
- */
 public class Configuration {
 	//记录mapper xml文件存放的位置
 	public static final String MAPPER_CONFIG_LOCATION = "config";

@@ -23,8 +23,7 @@ import java.sql.Statement;
 
 /**
  * Executor实现的基础；功能包括：创建statement对象，为sql语句绑定参数，执行增删改查等SQL语句、将结果映射集进行转化
- * @author Clinton Begin
- * 
+ *
  */
 public interface StatementHandler {
 
