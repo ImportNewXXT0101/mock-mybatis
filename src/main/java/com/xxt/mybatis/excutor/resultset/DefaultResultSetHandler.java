@@ -8,21 +8,17 @@ import java.util.List;
 
 import com.xxt.mybatis.config.MappedStatement;
 import com.xxt.mybatis.reflection.ReflectionUtil;
+import lombok.Data;
 
+@Data
 public class DefaultResultSetHandler implements ResultSetHandler {
 
 	private MappedStatement mappedStament;
-	
-	
-	
 	
 	public DefaultResultSetHandler(MappedStatement mappedStament) {
 		super();
 		this.mappedStament = mappedStament;
 	}
-
-
-
 
 	@Override
 	public <E> List<E> handleResultSets(ResultSet resultSet)

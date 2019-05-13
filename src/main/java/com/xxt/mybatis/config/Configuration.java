@@ -20,7 +20,13 @@ import java.util.Map;
 
 import com.xxt.mybatis.binding.MapperProxyFactory;
 import com.xxt.mybatis.session.SqlSession;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Configuration {
 	//记录mapper xml文件存放的位置
 	public static final String MAPPER_CONFIG_LOCATION = "config";
@@ -36,7 +42,7 @@ public class Configuration {
 	private String dbDriver;
 
     //mapper xml解析完以后select节点的信息存放在mappedStatements
-	protected final Map<String, MappedStatement> mappedStatements = new HashMap<String, MappedStatement>();
+	protected final Map<String, MappedStatement> mappedStatements = new HashMap<>();
 	
 	//为mapper接口生成动态代理的方法
 	public <T> T getMapper(Class<T> type, SqlSession sqlSession) {
@@ -50,47 +56,6 @@ public class Configuration {
 
 	public MappedStatement getMappedStatement(String sourceId) {
 		return mappedStatements.get(sourceId);
-	}
-
-
-
-	public String getDbUrl() {
-		return dbUrl;
-	}
-
-	public void setDbUrl(String dbUrl) {
-		this.dbUrl = dbUrl;
-	}
-
-	public String getDbUserName() {
-		return dbUserName;
-	}
-
-	public void setDbUserName(String dbUserName) {
-		this.dbUserName = dbUserName;
-	}
-
-	public String getDbPassword() {
-		return dbPassword;
-	}
-
-	public void setDbPassword(String dbPassword) {
-		this.dbPassword = dbPassword;
-	}
-
-	public String getDbDriver() {
-		return dbDriver;
-	}
-
-	public void setDbDriver(String dbDriver) {
-		this.dbDriver = dbDriver;
-	}
-
-	@Override
-	public String toString() {
-		return "Configuration [dbUrl=" + dbUrl + ", dbUserName=" + dbUserName
-				+ ", dbPassword=" + dbPassword + ", dbDriver=" + dbDriver
-				+ ", mappedStatements=" + mappedStatements + "]";
 	}
 
 }

@@ -16,8 +16,6 @@ public class DefaultSqlSession implements SqlSession {
 	//真正提供数据库访问能力的对象
 	private Executor executor;
 	
-	
-
 	public DefaultSqlSession(Configuration conf) {
 		super();
 		this.conf = conf;

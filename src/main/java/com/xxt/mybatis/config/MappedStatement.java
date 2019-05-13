@@ -1,5 +1,14 @@
 package com.xxt.mybatis.config;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class MappedStatement {
 	
 	private String namespace;
@@ -10,38 +19,7 @@ public class MappedStatement {
 	
 	private String resultType;
 
-	public String getSourceId() {
-		return sourceId;
-	}
 
-	public void setSourceId(String sourceId) {
-		this.sourceId = sourceId;
-	}
-
-	public String getSql() {
-		return sql;
-	}
-
-	public void setSql(String sql) {
-		this.sql = sql;
-	}
-
-	public String getResultType() {
-		return resultType;
-	}
-
-	public void setResultType(String resultType) {
-		this.resultType = resultType;
-	}
-
-	public String getNamespace() {
-		return namespace;
-	}
-
-	public void setNamespace(String namespace) {
-		this.namespace = namespace;
-	}
-	
 	
 	
 

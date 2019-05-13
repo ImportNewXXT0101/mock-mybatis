@@ -29,10 +29,11 @@ public class MapperProxy<T> implements InvocationHandler {
 		if (Object.class.equals(method.getDeclaringClass())) {// 如果是Object本身的方法不增强
 			return method.invoke(this, args);
 		}
-
-		Class<?> returnType = method.getReturnType();// 获取方法的返回参数class对象
-		Object ret = null;
-		if (isCollection(returnType)) {// 根据不同的返回参数类型调用不同的sqlsession不同的方法
+		// 获取方法的返回参数class对象
+		Class<?> returnType = method.getReturnType();
+		Object ret ;
+		// 根据不同的返回参数类型调用不同的sqlsession不同的方法
+		if (isCollection(returnType)) {
 			ret = sqlSession.selectList(mapperInterface.getName()+"."+ method.getName(), args);
 		} else {
 			ret = sqlSession.selectOne(mapperInterface.getName()+"."+ method.getName(), args);

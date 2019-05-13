@@ -26,7 +26,6 @@ public class SqlSessionFactory {
 		 loadMappersInfo();
 	}
 	
-	
 	 public SqlSession openSession(){
 		 SqlSession sqlSession  = new DefaultSqlSession(conf);
 		 return sqlSession;

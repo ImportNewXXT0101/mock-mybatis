@@ -11,10 +11,6 @@ import com.xxt.mybatis.config.MappedStatement;
 public class DefaultStatementHandler implements StatementHandler {
 	
 	private MappedStatement mappedStatment;
-	
-	
-	
-	
 
 	public DefaultStatementHandler(MappedStatement mappedStatment) {
 		super();

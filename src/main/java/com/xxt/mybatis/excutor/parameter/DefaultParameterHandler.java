@@ -1,39 +1,19 @@
 package com.xxt.mybatis.excutor.parameter;
 
+import lombok.Data;
+
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+@Data
 public class DefaultParameterHandler implements ParameterHandler {
 
 	private Object parameter;
-	
-	
-	
-	
-	
-	
 
 	public DefaultParameterHandler(Object parameter) {
 		super();
 		this.parameter = parameter;
 	}
-
-
-
-
-	public Object getParameter() {
-		return parameter;
-	}
-
-
-
-
-	public void setParameter(Object parameter) {
-		this.parameter = parameter;
-	}
-
-
-
 
 	@Override
 	public void setParameters(PreparedStatement ps) throws SQLException {
